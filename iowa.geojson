@@ -18,7 +18,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19081", "name": "Hancock County, IA" }
+      "properties": { "geoid": "05000US19081", "name": "Hancock County" }
     },
     {
       "geometry": {
@@ -184,7 +184,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19045", "name": "Clinton County, IA" }
+      "properties": { "geoid": "05000US19045", "name": "Clinton County" }
     },
     {
       "geometry": {
@@ -205,7 +205,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19077", "name": "Guthrie County, IA" }
+      "properties": { "geoid": "05000US19077", "name": "Guthrie County" }
     },
     {
       "geometry": {
@@ -225,7 +225,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19059", "name": "Dickinson County, IA" }
+      "properties": { "geoid": "05000US19059", "name": "Dickinson County" }
     },
     {
       "geometry": {
@@ -293,7 +293,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19005", "name": "Allamakee County, IA" }
+      "properties": { "geoid": "05000US19005", "name": "Allamakee County" }
     },
     {
       "geometry": {
@@ -310,7 +310,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19015", "name": "Boone County, IA" }
+      "properties": { "geoid": "05000US19015", "name": "Boone County" }
     },
     {
       "geometry": {
@@ -331,7 +331,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19083", "name": "Hardin County, IA" }
+      "properties": { "geoid": "05000US19083", "name": "Hardin County" }
     },
     {
       "geometry": {
@@ -350,7 +350,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19185", "name": "Wayne County, IA" }
+      "properties": { "geoid": "05000US19185", "name": "Wayne County" }
     },
     {
       "geometry": {
@@ -367,7 +367,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19125", "name": "Marion County, IA" }
+      "properties": { "geoid": "05000US19125", "name": "Marion County" }
     },
     {
       "geometry": {
@@ -450,7 +450,7 @@
       "type": "Feature",
       "properties": {
         "geoid": "05000US19155",
-        "name": "Pottawattamie County, IA"
+        "name": "Pottawattamie County"
       }
     },
     {
@@ -471,7 +471,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19171", "name": "Tama County, IA" }
+      "properties": { "geoid": "05000US19171", "name": "Tama County" }
     },
     {
       "geometry": {
@@ -490,7 +490,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19107", "name": "Keokuk County, IA" }
+      "properties": { "geoid": "05000US19107", "name": "Keokuk County" }
     },
     {
       "geometry": {
@@ -515,7 +515,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19177", "name": "Van Buren County, IA" }
+      "properties": { "geoid": "05000US19177", "name": "Van Buren County" }
     },
     {
       "geometry": {
@@ -570,7 +570,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19183", "name": "Washington County, IA" }
+      "properties": { "geoid": "05000US19183", "name": "Washington County" }
     },
     {
       "geometry": {
@@ -587,7 +587,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19127", "name": "Marshall County, IA" }
+      "properties": { "geoid": "05000US19127", "name": "Marshall County" }
     },
     {
       "geometry": {
@@ -608,7 +608,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19165", "name": "Shelby County, IA" }
+      "properties": { "geoid": "05000US19165", "name": "Shelby County" }
     },
     {
       "geometry": {
@@ -698,7 +698,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19085", "name": "Harrison County, IA" }
+      "properties": { "geoid": "05000US19085", "name": "Harrison County" }
     },
     {
       "geometry": {
@@ -722,7 +722,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19065", "name": "Fayette County, IA" }
+      "properties": { "geoid": "05000US19065", "name": "Fayette County" }
     },
     {
       "geometry": {
@@ -743,7 +743,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19039", "name": "Clarke County, IA" }
+      "properties": { "geoid": "05000US19039", "name": "Clarke County" }
     },
     {
       "geometry": {
@@ -760,7 +760,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19105", "name": "Jones County, IA" }
+      "properties": { "geoid": "05000US19105", "name": "Jones County" }
     },
     {
       "geometry": {
@@ -781,7 +781,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19141", "name": "O'Brien County, IA" }
+      "properties": { "geoid": "05000US19141", "name": "O'Brien County" }
     },
     {
       "geometry": {
@@ -799,7 +799,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19091", "name": "Humboldt County, IA" }
+      "properties": { "geoid": "05000US19091", "name": "Humboldt County" }
     },
     {
       "geometry": {
@@ -821,7 +821,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19009", "name": "Audubon County, IA" }
+      "properties": { "geoid": "05000US19009", "name": "Audubon County" }
     },
     {
       "geometry": {
@@ -841,7 +841,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19025", "name": "Calhoun County, IA" }
+      "properties": { "geoid": "05000US19025", "name": "Calhoun County" }
     },
     {
       "geometry": {
@@ -861,7 +861,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19035", "name": "Cherokee County, IA" }
+      "properties": { "geoid": "05000US19035", "name": "Cherokee County" }
     },
     {
       "geometry": {
@@ -880,7 +880,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19037", "name": "Chickasaw County, IA" }
+      "properties": { "geoid": "05000US19037", "name": "Chickasaw County" }
     },
     {
       "geometry": {
@@ -897,7 +897,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19169", "name": "Story County, IA" }
+      "properties": { "geoid": "05000US19169", "name": "Story County" }
     },
     {
       "geometry": {
@@ -914,7 +914,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19147", "name": "Palo Alto County, IA" }
+      "properties": { "geoid": "05000US19147", "name": "Palo Alto County" }
     },
     {
       "geometry": {
@@ -937,7 +937,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19049", "name": "Dallas County, IA" }
+      "properties": { "geoid": "05000US19049", "name": "Dallas County" }
     },
     {
       "geometry": {
@@ -960,7 +960,7 @@
       "type": "Feature",
       "properties": {
         "geoid": "05000US19033",
-        "name": "Cerro Gordo County, IA"
+        "name": "Cerro Gordo County"
       }
     },
     {
@@ -980,7 +980,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19191", "name": "Winneshiek County, IA" }
+      "properties": { "geoid": "05000US19191", "name": "Winneshiek County" }
     },
     {
       "geometry": {
@@ -1002,7 +1002,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19173", "name": "Taylor County, IA" }
+      "properties": { "geoid": "05000US19173", "name": "Taylor County" }
     },
     {
       "geometry": {
@@ -1069,7 +1069,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19071", "name": "Fremont County, IA" }
+      "properties": { "geoid": "05000US19071", "name": "Fremont County" }
     },
     {
       "geometry": {
@@ -1087,7 +1087,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19063", "name": "Emmet County, IA" }
+      "properties": { "geoid": "05000US19063", "name": "Emmet County" }
     },
     {
       "geometry": {
@@ -1106,7 +1106,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19089", "name": "Howard County, IA" }
+      "properties": { "geoid": "05000US19089", "name": "Howard County" }
     },
     {
       "geometry": {
@@ -1175,7 +1175,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19193", "name": "Woodbury County, IA" }
+      "properties": { "geoid": "05000US19193", "name": "Woodbury County" }
     },
     {
       "geometry": {
@@ -1193,7 +1193,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19027", "name": "Carroll County, IA" }
+      "properties": { "geoid": "05000US19027", "name": "Carroll County" }
     },
     {
       "geometry": {
@@ -1214,7 +1214,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19079", "name": "Hamilton County, IA" }
+      "properties": { "geoid": "05000US19079", "name": "Hamilton County" }
     },
     {
       "geometry": {
@@ -1231,7 +1231,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19131", "name": "Mitchell County, IA" }
+      "properties": { "geoid": "05000US19131", "name": "Mitchell County" }
     },
     {
       "geometry": {
@@ -1253,7 +1253,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19157", "name": "Poweshiek County, IA" }
+      "properties": { "geoid": "05000US19157", "name": "Poweshiek County" }
     },
     {
       "geometry": {
@@ -1272,7 +1272,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19197", "name": "Wright County, IA" }
+      "properties": { "geoid": "05000US19197", "name": "Wright County" }
     },
     {
       "geometry": {
@@ -1289,7 +1289,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19041", "name": "Clay County, IA" }
+      "properties": { "geoid": "05000US19041", "name": "Clay County" }
     },
     {
       "geometry": {
@@ -1307,7 +1307,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19175", "name": "Union County, IA" }
+      "properties": { "geoid": "05000US19175", "name": "Union County" }
     },
     {
       "geometry": {
@@ -1327,7 +1327,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19087", "name": "Henry County, IA" }
+      "properties": { "geoid": "05000US19087", "name": "Henry County" }
     },
     {
       "geometry": {
@@ -1346,7 +1346,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19117", "name": "Lucas County, IA" }
+      "properties": { "geoid": "05000US19117", "name": "Lucas County" }
     },
     {
       "geometry": {
@@ -1363,7 +1363,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19189", "name": "Winnebago County, IA" }
+      "properties": { "geoid": "05000US19189", "name": "Winnebago County" }
     },
     {
       "geometry": {
@@ -1422,7 +1422,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19061", "name": "Dubuque County, IA" }
+      "properties": { "geoid": "05000US19061", "name": "Dubuque County" }
     },
     {
       "geometry": {
@@ -1443,7 +1443,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19101", "name": "Jefferson County, IA" }
+      "properties": { "geoid": "05000US19101", "name": "Jefferson County" }
     },
     {
       "geometry": {
@@ -1461,7 +1461,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19031", "name": "Cedar County, IA" }
+      "properties": { "geoid": "05000US19031", "name": "Cedar County" }
     },
     {
       "geometry": {
@@ -1478,7 +1478,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19017", "name": "Bremer County, IA" }
+      "properties": { "geoid": "05000US19017", "name": "Bremer County" }
     },
     {
       "geometry": {
@@ -1497,7 +1497,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19051", "name": "Davis County, IA" }
+      "properties": { "geoid": "05000US19051", "name": "Davis County" }
     },
     {
       "geometry": {
@@ -1521,7 +1521,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19093", "name": "Ida County, IA" }
+      "properties": { "geoid": "05000US19093", "name": "Ida County" }
     },
     {
       "geometry": {
@@ -1544,7 +1544,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19075", "name": "Grundy County, IA" }
+      "properties": { "geoid": "05000US19075", "name": "Grundy County" }
     },
     {
       "geometry": {
@@ -1561,7 +1561,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19195", "name": "Worth County, IA" }
+      "properties": { "geoid": "05000US19195", "name": "Worth County" }
     },
     {
       "geometry": {
@@ -1578,7 +1578,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19123", "name": "Mahaska County, IA" }
+      "properties": { "geoid": "05000US19123", "name": "Mahaska County" }
     },
     {
       "geometry": {
@@ -1599,7 +1599,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19151", "name": "Pocahontas County, IA" }
+      "properties": { "geoid": "05000US19151", "name": "Pocahontas County" }
     },
     {
       "geometry": {
@@ -1616,7 +1616,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19135", "name": "Monroe County, IA" }
+      "properties": { "geoid": "05000US19135", "name": "Monroe County" }
     },
     {
       "geometry": {
@@ -1738,7 +1738,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19057", "name": "Des Moines County, IA" }
+      "properties": { "geoid": "05000US19057", "name": "Des Moines County" }
     },
     {
       "geometry": {
@@ -1755,7 +1755,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19029", "name": "Cass County, IA" }
+      "properties": { "geoid": "05000US19029", "name": "Cass County" }
     },
     {
       "geometry": {
@@ -1779,7 +1779,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19055", "name": "Delaware County, IA" }
+      "properties": { "geoid": "05000US19055", "name": "Delaware County" }
     },
     {
       "geometry": {
@@ -1823,7 +1823,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19115", "name": "Louisa County, IA" }
+      "properties": { "geoid": "05000US19115", "name": "Louisa County" }
     },
     {
       "geometry": {
@@ -1841,7 +1841,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19073", "name": "Greene County, IA" }
+      "properties": { "geoid": "05000US19073", "name": "Greene County" }
     },
     {
       "geometry": {
@@ -1898,7 +1898,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19181", "name": "Warren County, IA" }
+      "properties": { "geoid": "05000US19181", "name": "Warren County" }
     },
     {
       "geometry": {
@@ -1957,7 +1957,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19153", "name": "Polk County, IA" }
+      "properties": { "geoid": "05000US19153", "name": "Polk County" }
     },
     {
       "geometry": {
@@ -2015,7 +2015,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19103", "name": "Johnson County, IA" }
+      "properties": { "geoid": "05000US19103", "name": "Johnson County" }
     },
     {
       "geometry": {
@@ -2214,7 +2214,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19163", "name": "Scott County, IA" }
+      "properties": { "geoid": "05000US19163", "name": "Scott County" }
     },
     {
       "geometry": {
@@ -2238,7 +2238,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19095", "name": "Iowa County, IA" }
+      "properties": { "geoid": "05000US19095", "name": "Iowa County" }
     },
     {
       "geometry": {
@@ -2261,7 +2261,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19113", "name": "Linn County, IA" }
+      "properties": { "geoid": "05000US19113", "name": "Linn County" }
     },
     {
       "geometry": {
@@ -2283,7 +2283,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19161", "name": "Sac County, IA" }
+      "properties": { "geoid": "05000US19161", "name": "Sac County" }
     },
     {
       "geometry": {
@@ -2304,7 +2304,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19099", "name": "Jasper County, IA" }
+      "properties": { "geoid": "05000US19099", "name": "Jasper County" }
     },
     {
       "geometry": {
@@ -2326,7 +2326,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19013", "name": "Black Hawk County, IA" }
+      "properties": { "geoid": "05000US19013", "name": "Black Hawk County" }
     },
     {
       "geometry": {
@@ -2346,7 +2346,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19187", "name": "Webster County, IA" }
+      "properties": { "geoid": "05000US19187", "name": "Webster County" }
     },
     {
       "geometry": {
@@ -2366,7 +2366,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19067", "name": "Floyd County, IA" }
+      "properties": { "geoid": "05000US19067", "name": "Floyd County" }
     },
     {
       "geometry": {
@@ -2383,7 +2383,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19069", "name": "Franklin County, IA" }
+      "properties": { "geoid": "05000US19069", "name": "Franklin County" }
     },
     {
       "geometry": {
@@ -2401,7 +2401,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19159", "name": "Ringgold County, IA" }
+      "properties": { "geoid": "05000US19159", "name": "Ringgold County" }
     },
     {
       "geometry": {
@@ -2418,7 +2418,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19137", "name": "Montgomery County, IA" }
+      "properties": { "geoid": "05000US19137", "name": "Montgomery County" }
     },
     {
       "geometry": {
@@ -2435,7 +2435,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19047", "name": "Crawford County, IA" }
+      "properties": { "geoid": "05000US19047", "name": "Crawford County" }
     },
     {
       "geometry": {
@@ -2452,7 +2452,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19003", "name": "Adams County, IA" }
+      "properties": { "geoid": "05000US19003", "name": "Adams County" }
     },
     {
       "geometry": {
@@ -2544,7 +2544,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19133", "name": "Monona County, IA" }
+      "properties": { "geoid": "05000US19133", "name": "Monona County" }
     },
     {
       "geometry": {
@@ -2561,7 +2561,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19001", "name": "Adair County, IA" }
+      "properties": { "geoid": "05000US19001", "name": "Adair County" }
     },
     {
       "geometry": {
@@ -2618,7 +2618,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19129", "name": "Mills County, IA" }
+      "properties": { "geoid": "05000US19129", "name": "Mills County" }
     },
     {
       "geometry": {
@@ -2646,7 +2646,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19019", "name": "Buchanan County, IA" }
+      "properties": { "geoid": "05000US19019", "name": "Buchanan County" }
     },
     {
       "geometry": {
@@ -2665,7 +2665,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19007", "name": "Appanoose County, IA" }
+      "properties": { "geoid": "05000US19007", "name": "Appanoose County" }
     },
     {
       "geometry": {
@@ -2683,7 +2683,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19053", "name": "Decatur County, IA" }
+      "properties": { "geoid": "05000US19053", "name": "Decatur County" }
     },
     {
       "geometry": {
@@ -2813,7 +2813,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19119", "name": "Lyon County, IA" }
+      "properties": { "geoid": "05000US19119", "name": "Lyon County" }
     },
     {
       "geometry": {
@@ -2886,7 +2886,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19043", "name": "Clayton County, IA" }
+      "properties": { "geoid": "05000US19043", "name": "Clayton County" }
     },
     {
       "geometry": {
@@ -2903,7 +2903,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19109", "name": "Kossuth County, IA" }
+      "properties": { "geoid": "05000US19109", "name": "Kossuth County" }
     },
     {
       "geometry": {
@@ -2924,7 +2924,7 @@
       "type": "Feature",
       "properties": {
         "geoid": "05000US19021",
-        "name": "Buena Vista County, IA"
+        "name": "Buena Vista County"
       }
     },
     {
@@ -2963,7 +2963,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19139", "name": "Muscatine County, IA" }
+      "properties": { "geoid": "05000US19139", "name": "Muscatine County" }
     },
     {
       "geometry": {
@@ -3148,7 +3148,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19149", "name": "Plymouth County, IA" }
+      "properties": { "geoid": "05000US19149", "name": "Plymouth County" }
     },
     {
       "geometry": {
@@ -3307,7 +3307,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19111", "name": "Lee County, IA" }
+      "properties": { "geoid": "05000US19111", "name": "Lee County" }
     },
     {
       "geometry": {
@@ -3326,7 +3326,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19121", "name": "Madison County, IA" }
+      "properties": { "geoid": "05000US19121", "name": "Madison County" }
     },
     {
       "geometry": {
@@ -3347,7 +3347,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19011", "name": "Benton County, IA" }
+      "properties": { "geoid": "05000US19011", "name": "Benton County" }
     },
     {
       "geometry": {
@@ -3370,7 +3370,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19145", "name": "Page County, IA" }
+      "properties": { "geoid": "05000US19145", "name": "Page County" }
     },
     {
       "geometry": {
@@ -3387,7 +3387,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19179", "name": "Wapello County, IA" }
+      "properties": { "geoid": "05000US19179", "name": "Wapello County" }
     },
     {
       "geometry": {
@@ -3445,7 +3445,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19097", "name": "Jackson County, IA" }
+      "properties": { "geoid": "05000US19097", "name": "Jackson County" }
     },
     {
       "geometry": {
@@ -3465,7 +3465,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19143", "name": "Osceola County, IA" }
+      "properties": { "geoid": "05000US19143", "name": "Osceola County" }
     },
     {
       "geometry": {
@@ -3618,7 +3618,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19167", "name": "Sioux County, IA" }
+      "properties": { "geoid": "05000US19167", "name": "Sioux County" }
     },
     {
       "geometry": {
@@ -3635,7 +3635,7 @@
         ]
       },
       "type": "Feature",
-      "properties": { "geoid": "05000US19023", "name": "Butler County, IA" }
+      "properties": { "geoid": "05000US19023", "name": "Butler County" }
     }
   ]
 }

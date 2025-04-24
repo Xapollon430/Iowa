@@ -76,7 +76,7 @@
       const height = 500;
 
       // Years for the timeline
-      const years = [2018, 2019, 2020, 2021, 2022];
+      const years = [2020, 2021, 2022, 2023, 2024];
       let currentYear = 2020;
 
       // Create SVG container
@@ -94,32 +94,49 @@
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-      // Color scale for the heatmap
+      // Color scale for relative change (diverging, centered at 0%)
       const colorScale = d3
-        .scaleSequential(d3.interpolateYlOrRd)
-        .domain([0, 100]); // Adjust this range based on your data values
+        .scaleDiverging(d3.interpolateRdBu)
+        .domain([10, 0, -10]); // +10% (red), 0% (white), -10% (blue)
 
-      // Load your GeoJSON file
-      d3.json("./iowa.geojson")
-        .then((data) => {
-          console.log("Loaded GeoJSON data:", data); // Debug: log data
-          if (!data.features || data.features.length === 0) {
+      // Load your GeoJSON and data.json files
+      Promise.all([d3.json("./iowa.geojson"), d3.json("./data.json")])
+        .then(([geoData, popData]) => {
+          console.log("Loaded GeoJSON data:", geoData); // Debug: log data
+          if (!geoData.features || geoData.features.length === 0) {
             d3.select("#map").append("p").text("No features found in GeoJSON.");
             return;
           }
-          console.log("Number of counties:", data.features.length); // Debug: log feature count
+          console.log("Number of counties:", geoData.features.length); // Debug: log feature count
 
-          // Generate random data for each year for demonstration
-          // In practice, replace this with your actual year-based data
-          data.features.forEach((d) => {
+          // Create a map from county name to population object
+          const popMap = {};
+          popData.forEach((item) => {
+            popMap[item.county] = item.population;
+          });
+
+          // Assign percent change data to each county's yearValues, and store raw population for tooltip
+          geoData.features.forEach((d) => {
             d.properties.yearValues = {};
+            d.properties.yearValuesRaw = {};
+            const countyName = d.properties.name;
+            const countyPop = popMap[countyName];
+            const baseYearPop =
+              countyPop && countyPop[2020] ? countyPop[2020] : null;
             years.forEach((year) => {
-              d.properties.yearValues[year] = Math.random() * 100;
+              if (countyPop && countyPop[year] && baseYearPop) {
+                d.properties.yearValues[year] =
+                  ((countyPop[year] - baseYearPop) / baseYearPop) * 100;
+                d.properties.yearValuesRaw[year] = countyPop[year];
+              } else {
+                d.properties.yearValues[year] = null;
+                d.properties.yearValuesRaw[year] = null;
+              }
             });
           });
 
           // Debug: Try fitSize projection for troubleshooting
-          const projection = d3.geoIdentity().fitSize([width, height], data);
+          const projection = d3.geoIdentity().fitSize([width, height], geoData);
 
           // Create path generator
           const path = d3.geoPath().projection(projection);
@@ -127,7 +144,7 @@
           // Draw counties
           const countyPaths = svg
             .selectAll("path")
-            .data(data.features)
+            .data(geoData.features)
             .enter()
             .append("path")
             .attr("class", "county")
@@ -138,15 +155,21 @@
             .on("mouseover", function (event, d) {
               d3.select(this).transition().duration(200).style("opacity", 0.8);
               tooltip.transition().duration(200).style("opacity", 0.9);
+              const pop =
+                d.properties.yearValuesRaw &&
+                d.properties.yearValuesRaw[currentYear]
+                  ? d.properties.yearValuesRaw[currentYear]
+                  : null;
+              const pct = d.properties.yearValues[currentYear];
               tooltip
                 .html(
-                  `<strong>${
-                    d.properties.NAME || d.properties.name
-                  } County</strong><br>Year: ${currentYear}<br>Value: ${d.properties.yearValues[
-                    currentYear
-                  ].toFixed(2)}`
+                  `<strong>${d.properties.name}</strong><br>` +
+                    `Population: ${pop ? pop.toLocaleString() : "N/A"}<br>` +
+                    `Change: ${
+                      pct !== null && pct !== undefined ? pct.toFixed(2) : "N/A"
+                    }%`
                 )
-                .style("left", event.pageX + 10 + "px")
+                .style("left", event.pageX + 5 + "px")
                 .style("top", event.pageY - 28 + "px");
             })
             .on("mouseout", function () {
@@ -186,59 +209,46 @@
           });
 
           // Add legend
-          const legendWidth = 200;
-          const legendHeight = 10;
-
-          const legend = svg
-            .append("g")
-            .attr(
-              "transform",
-              `translate(${width - legendWidth - 20}, ${height - 40})`
-            );
-
+          const legendSvg = d3
+            .select("#map")
+            .append("svg")
+            .attr("width", 220)
+            .attr("height", 50);
           const legendScale = d3
             .scaleLinear()
-            .domain([0, 100])
-            .range([0, legendWidth]);
-
-          // Create gradient for legend
-          const defs = svg.append("defs");
-          const linearGradient = defs
-            .append("linearGradient")
-            .attr("id", "linear-gradient");
-
-          linearGradient
-            .selectAll("stop")
-            .data(d3.range(0, 1.1, 0.1))
-            .enter()
-            .append("stop")
-            .attr("offset", (d) => d)
-            .attr("stop-color", (d) => colorScale(d * 100));
-
-          // Draw legend rectangle
-          legend
-            .append("rect")
-            .attr("width", legendWidth)
-            .attr("height", legendHeight)
-            .style("fill", "url(#linear-gradient)");
-
-          // Add legend axis
+            .domain([10, -10])
+            .range([0, 200]);
           const legendAxis = d3
             .axisBottom(legendScale)
-            .ticks(5)
-            .tickFormat((d) => d);
-
-          legend
+            .tickFormat((d) => `${d}%`)
+            .ticks(5);
+          // Gradient
+          const defs = legendSvg.append("defs");
+          const linearGradient = defs
+            .append("linearGradient")
+            .attr("id", "legend-gradient");
+          linearGradient
+            .selectAll("stop")
+            .data([
+              { offset: "0%", color: colorScale(10) },
+              { offset: "50%", color: colorScale(0) },
+              { offset: "100%", color: colorScale(-10) },
+            ])
+            .enter()
+            .append("stop")
+            .attr("offset", (d) => d.offset)
+            .attr("stop-color", (d) => d.color);
+          legendSvg
+            .append("rect")
+            .attr("x", 10)
+            .attr("y", 10)
+            .attr("width", 200)
+            .attr("height", 15)
+            .style("fill", "url(#legend-gradient)");
+          legendSvg
             .append("g")
-            .attr("transform", `translate(0, ${legendHeight})`)
+            .attr("transform", "translate(10, 25)")
             .call(legendAxis);
-
-          // Add legend title
-          legend
-            .append("text")
-            .attr("y", -5)
-            .attr("font-size", "12px")
-            .text("Value");
         })
         .catch((error) => {
           console.error("Error loading the GeoJSON file:", error);
