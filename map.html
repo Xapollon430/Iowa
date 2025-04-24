@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iowa Counties Heatmap</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <style>
+      body {
+        background-color: grey;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .county {
+        stroke: #fff;
+        stroke-width: 0.5px;
+      }
+      .county:hover {
+        stroke: #000;
+        stroke-width: 1px;
+      }
+      .tooltip {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ddd;
+        padding: 8px;
+        border-radius: 4px;
+        pointer-events: none;
+        font-size: 12px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      #map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .timeline-container {
+        width: 400px;
+        overflow-x: auto;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .timeline-slider-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 400px;
+        margin: 0 auto;
+      }
+      .timeline-slider {
+        width: 100%;
+        margin-bottom: 0;
+      }
+      .timeline-labels {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 12px;
+        color: #444;
+        margin-top: 2px;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iowa Counties Heatmap</h1>
+    <div class="timeline-container" id="timeline"></div>
+    <div id="map"></div>
+
+    <script>
+      // SVG dimensions
+      const width = 800;
+      const height = 500;
+
+      // Years for the timeline
+      const years = [2018, 2019, 2020, 2021, 2022];
+      let currentYear = 2020;
+
+      // Create SVG container
+      const svg = d3
+        .select("#map")
+        .append("svg")
+        .attr("viewBox", [0, 0, width, height])
+        .attr("width", width)
+        .attr("height", height);
+
+      // Create tooltip div
+      const tooltip = d3
+        .select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+      // Color scale for the heatmap
+      const colorScale = d3
+        .scaleSequential(d3.interpolateYlOrRd)
+        .domain([0, 100]); // Adjust this range based on your data values
+
+      // Load your GeoJSON file
+      d3.json("./iowa.geojson")
+        .then((data) => {
+          console.log("Loaded GeoJSON data:", data); // Debug: log data
+          if (!data.features || data.features.length === 0) {
+            d3.select("#map").append("p").text("No features found in GeoJSON.");
+            return;
+          }
+          console.log("Number of counties:", data.features.length); // Debug: log feature count
+
+          // Generate random data for each year for demonstration
+          // In practice, replace this with your actual year-based data
+          data.features.forEach((d) => {
+            d.properties.yearValues = {};
+            years.forEach((year) => {
+              d.properties.yearValues[year] = Math.random() * 100;
+            });
+          });
+
+          // Debug: Try fitSize projection for troubleshooting
+          const projection = d3.geoIdentity().fitSize([width, height], data);
+
+          // Create path generator
+          const path = d3.geoPath().projection(projection);
+
+          // Draw counties
+          const countyPaths = svg
+            .selectAll("path")
+            .data(data.features)
+            .enter()
+            .append("path")
+            .attr("class", "county")
+            .attr("d", path)
+            .attr("fill", (d) =>
+              colorScale(d.properties.yearValues[currentYear])
+            )
+            .on("mouseover", function (event, d) {
+              d3.select(this).transition().duration(200).style("opacity", 0.8);
+              tooltip.transition().duration(200).style("opacity", 0.9);
+              tooltip
+                .html(
+                  `<strong>${
+                    d.properties.NAME || d.properties.name
+                  } County</strong><br>Year: ${currentYear}<br>Value: ${d.properties.yearValues[
+                    currentYear
+                  ].toFixed(2)}`
+                )
+                .style("left", event.pageX + 10 + "px")
+                .style("top", event.pageY - 28 + "px");
+            })
+            .on("mouseout", function () {
+              d3.select(this).transition().duration(500).style("opacity", 1);
+              tooltip.transition().duration(500).style("opacity", 0);
+            });
+
+          // Update function for year
+          function updateMapForYear(year) {
+            countyPaths
+              .transition()
+              .duration(300)
+              .attr("fill", (d) => colorScale(d.properties.yearValues[year]));
+          }
+
+          // Timeline
+          const timeline = d3.select("#timeline");
+          const timelineSliderWrap = timeline
+            .append("div")
+            .attr("class", "timeline-slider-wrap");
+          const timelineSlider = timelineSliderWrap
+            .append("input")
+            .attr("class", "timeline-slider")
+            .attr("type", "range")
+            .attr("min", years[0])
+            .attr("max", years[years.length - 1])
+            .attr("value", currentYear)
+            .on("input", function () {
+              currentYear = +this.value;
+              updateMapForYear(currentYear);
+            });
+          const timelineLabels = timelineSliderWrap
+            .append("div")
+            .attr("class", "timeline-labels");
+          years.forEach((year) => {
+            timelineLabels.append("span").text(year);
+          });
+
+          // Add legend
+          const legendWidth = 200;
+          const legendHeight = 10;
+
+          const legend = svg
+            .append("g")
+            .attr(
+              "transform",
+              `translate(${width - legendWidth - 20}, ${height - 40})`
+            );
+
+          const legendScale = d3
+            .scaleLinear()
+            .domain([0, 100])
+            .range([0, legendWidth]);
+
+          // Create gradient for legend
+          const defs = svg.append("defs");
+          const linearGradient = defs
+            .append("linearGradient")
+            .attr("id", "linear-gradient");
+
+          linearGradient
+            .selectAll("stop")
+            .data(d3.range(0, 1.1, 0.1))
+            .enter()
+            .append("stop")
+            .attr("offset", (d) => d)
+            .attr("stop-color", (d) => colorScale(d * 100));
+
+          // Draw legend rectangle
+          legend
+            .append("rect")
+            .attr("width", legendWidth)
+            .attr("height", legendHeight)
+            .style("fill", "url(#linear-gradient)");
+
+          // Add legend axis
+          const legendAxis = d3
+            .axisBottom(legendScale)
+            .ticks(5)
+            .tickFormat((d) => d);
+
+          legend
+            .append("g")
+            .attr("transform", `translate(0, ${legendHeight})`)
+            .call(legendAxis);
+
+          // Add legend title
+          legend
+            .append("text")
+            .attr("y", -5)
+            .attr("font-size", "12px")
+            .text("Value");
+        })
+        .catch((error) => {
+          console.error("Error loading the GeoJSON file:", error);
+          d3.select("#map")
+            .append("p")
+            .text("Error loading map data. Please check your GeoJSON file.");
+        });
+    </script>
+  </body>
+</html>
